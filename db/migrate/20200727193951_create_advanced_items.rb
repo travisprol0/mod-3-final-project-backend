@@ -5,6 +5,7 @@ class CreateAdvancedItems < ActiveRecord::Migration[6.0]
       t.integer :recipe_id
       t.string :img_url
       t.integer :inventory_id
+      t.integer :damage
       t.timestamps
     end
   end

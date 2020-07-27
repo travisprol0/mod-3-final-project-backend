@@ -21,7 +21,7 @@ recipe = Recipe.create(name: "fishing pole", advanced_item_id: advanced_item1.id
 
 item1 = Item.create(name: "String", img_url: 'https://rb.gy/vcm4sr', inventory_id:inventory.id, recipe_id: recipe.id)
 item2 = Item.create(name: "Stick", img_url: 'https://rb.gy/vcm4sr', inventory_id: inventory.id, recipe_id: recipe.id)
-item3 = Item.create(name: "Hammer", img_url: 'https://rb.gy/vcm4sr', inventory_id: inventory.id, recipe_id: recipe.id)
+item3 = Item.create(name: "Hammer", img_url: 'https://rb.gy/vcm4sr', inventory_id: inventory.id)
 
 
 
