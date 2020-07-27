@@ -17,7 +17,7 @@ dummy = Character.create(name:'dumb')
 inventory = Inventory.create(character_id: character.id)
 dumbinventory = Inventory.create(character_id: dummy.id)
 
-advanced_item1 = AdvancedItem.create(name: "Fishing Pole")
+advanced_item1 = AdvancedItem.create(name: "Fishing Pole", inventory_id: dumbinventory.id)
 two = AdvancedItem.create(name: 'Torch', inventory_id: dumbinventory.id)
 key = AdvancedItem.create(name: 'Key', inventory_id: dumbinventory.id)
 
@@ -35,7 +35,7 @@ item4 = Item.new(name: 'Stick', img_url: 'https://rb.gy/vcm4sr', recipe_id: rec2
 item4.save()
 item5 = Item.new(name: 'Matches', img_url: 'https://rb.gy/8imoux', recipe_id: rec2.id, inventory_id: dumbinventory.id)
 item5.save()
-item6 = Item.new(name: 'gold', img_url: 'https://rb.gy/uwiid2', recipe_id: rec3.id, inventory_id: dumbinventory.id)
+item6 = Item.new(name: 'Gold', img_url: 'https://rb.gy/uwiid2', recipe_id: rec3.id, inventory_id: dumbinventory.id)
 item6.save()
 #stone, brick, gold, torch
 # Item.create(name: 'hi')

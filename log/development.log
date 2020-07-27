@@ -1464,3 +1464,85 @@ Migrating to CreateAdvancedItems (20200727193951)
   [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "img_url", "recipe_id", "inventory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "gold"], ["img_url", "https://rb.gy/uwiid2"], ["recipe_id", 2], ["inventory_id", 2], ["created_at", "2020-07-27 22:37:29.747128"], ["updated_at", "2020-07-27 22:37:29.747128"]]
   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mAdvancedItem Load (0.3ms)[0m  [1m[34mSELECT "advanced_items".* FROM "advanced_items" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/items" for ::1 at 2020-07-27 18:38:50 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 51ms (Views: 12.9ms | ActiveRecord: 31.6ms | Allocations: 8274)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mItem Destroy (2.0ms)[0m  [1m[31mDELETE FROM "items"[0m
+  [1m[36mInventory Destroy (0.6ms)[0m  [1m[31mDELETE FROM "inventories"[0m
+  [1m[36mCharacter Destroy (1.4ms)[0m  [1m[31mDELETE FROM "characters"[0m
+  [1m[36mAdvancedItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "advanced_items"[0m
+  [1m[36mRecipe Destroy (0.8ms)[0m  [1m[31mDELETE FROM "recipes"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.5ms)[0m  [1m[32mINSERT INTO "characters" ("name", "health", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Character #1"], ["health", 100], ["img_url", "https://vignette.wikia.nocookie.net/despicableme/images/1/1d/Kevin_minions.png/revision/latest/top-crop/width/360/height/450?cb=20170703052012"], ["created_at", "2020-07-27 22:39:51.499606"], ["updated_at", "2020-07-27 22:39:51.499606"]]
+  [1m[35m (25.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.3ms)[0m  [1m[32mINSERT INTO "characters" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "dumb"], ["created_at", "2020-07-27 22:39:51.529244"], ["updated_at", "2020-07-27 22:39:51.529244"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mInventory Create (0.4ms)[0m  [1m[32mINSERT INTO "inventories" ("character_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["character_id", 3], ["created_at", "2020-07-27 22:39:51.548797"], ["updated_at", "2020-07-27 22:39:51.548797"]]
+  [1m[35m (26.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mInventory Create (0.3ms)[0m  [1m[32mINSERT INTO "inventories" ("character_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["character_id", 4], ["created_at", "2020-07-27 22:39:51.584683"], ["updated_at", "2020-07-27 22:39:51.584683"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (21.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAdvancedItem Create (0.5ms)[0m  [1m[32mINSERT INTO "advanced_items" ("name", "inventory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Fishing Pole"], ["inventory_id", 4], ["created_at", "2020-07-27 22:39:51.634878"], ["updated_at", "2020-07-27 22:39:51.634878"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.4ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAdvancedItem Create (2.3ms)[0m  [1m[32mINSERT INTO "advanced_items" ("name", "inventory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Torch"], ["inventory_id", 4], ["created_at", "2020-07-27 22:39:51.648465"], ["updated_at", "2020-07-27 22:39:51.648465"]]
+  [1m[35m (23.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAdvancedItem Create (0.4ms)[0m  [1m[32mINSERT INTO "advanced_items" ("name", "inventory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Key"], ["inventory_id", 4], ["created_at", "2020-07-27 22:39:51.683974"], ["updated_at", "2020-07-27 22:39:51.683974"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdvancedItem Load (0.2ms)[0m  [1m[34mSELECT "advanced_items".* FROM "advanced_items" WHERE "advanced_items"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mRecipe Create (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "advanced_item_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Fishing Pole"], ["advanced_item_id", 3], ["created_at", "2020-07-27 22:39:51.699528"], ["updated_at", "2020-07-27 22:39:51.699528"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (25.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdvancedItem Load (0.3ms)[0m  [1m[34mSELECT "advanced_items".* FROM "advanced_items" WHERE "advanced_items"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mRecipe Create (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "advanced_item_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Torch"], ["advanced_item_id", 4], ["created_at", "2020-07-27 22:39:51.729975"], ["updated_at", "2020-07-27 22:39:51.729975"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdvancedItem Load (0.2ms)[0m  [1m[34mSELECT "advanced_items".* FROM "advanced_items" WHERE "advanced_items"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRecipe Create (0.2ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "advanced_item_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Key"], ["advanced_item_id", 5], ["created_at", "2020-07-27 22:39:51.735227"], ["updated_at", "2020-07-27 22:39:51.735227"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mInventory Load (0.3ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "img_url", "recipe_id", "inventory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "String"], ["img_url", "https://rb.gy/vcm4sr"], ["recipe_id", 3], ["inventory_id", 4], ["created_at", "2020-07-27 22:39:51.750678"], ["updated_at", "2020-07-27 22:39:51.750678"]]
+  [1m[35m (25.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mInventory Load (0.3ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "img_url", "recipe_id", "inventory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Rod"], ["img_url", "https://rb.gy/vcm4sr"], ["recipe_id", 3], ["inventory_id", 4], ["created_at", "2020-07-27 22:39:51.783592"], ["updated_at", "2020-07-27 22:39:51.783592"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mInventory Load (0.4ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "img_url", "recipe_id", "inventory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Hammer"], ["img_url", "https://rb.gy/vcm4sr"], ["recipe_id", 5], ["inventory_id", 4], ["created_at", "2020-07-27 22:39:51.791226"], ["updated_at", "2020-07-27 22:39:51.791226"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "img_url", "recipe_id", "inventory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Stick"], ["img_url", "https://rb.gy/vcm4sr"], ["recipe_id", 4], ["inventory_id", 4], ["created_at", "2020-07-27 22:39:51.797008"], ["updated_at", "2020-07-27 22:39:51.797008"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mInventory Load (25.5ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "img_url", "recipe_id", "inventory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Matches"], ["img_url", "https://rb.gy/8imoux"], ["recipe_id", 4], ["inventory_id", 4], ["created_at", "2020-07-27 22:39:51.828986"], ["updated_at", "2020-07-27 22:39:51.828986"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "img_url", "recipe_id", "inventory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Gold"], ["img_url", "https://rb.gy/uwiid2"], ["recipe_id", 5], ["inventory_id", 4], ["created_at", "2020-07-27 22:39:51.835772"], ["updated_at", "2020-07-27 22:39:51.835772"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
