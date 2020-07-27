@@ -15,13 +15,21 @@ character = Character.create(name: "Character #1", health: 100, img_url: 'https:
 
 inventory = Inventory.create(character_id: character.id)
 
-advanced_item1 = AdvancedItem.create(name: "fishing pole",inventory_id: inventory.id)
+advanced_item1 = AdvancedItem.create(name: "Fishing Pole")
+two = AdvancedItem.create(name: 'Torch')
+key = AdvancedItem.create(name: 'Key')
 
-recipe = Recipe.create(name: "fishing pole", advanced_item_id: advanced_item1.id)
+recipe = Recipe.create(name: "Fishing Pole", advanced_item_id: advanced_item1.id)
+rec2 = Recipe.create(name: 'Torch', advanced_item_id: two.id)
+rec3 = Recipe.create(name: 'Key', advanced_item_id: key.id)
 
-item1 = Item.create(name: "String", img_url: 'https://rb.gy/vcm4sr', inventory_id:inventory.id, recipe_id: recipe.id)
-item2 = Item.create(name: "Stick", img_url: 'https://rb.gy/vcm4sr', inventory_id: inventory.id, recipe_id: recipe.id)
-item3 = Item.create(name: "Hammer", img_url: 'https://rb.gy/vcm4sr', inventory_id: inventory.id)
+item1 = Item.create(name: "String", img_url: 'https://rb.gy/vcm4sr', recipe_id: recipe.id)
+item2 = Item.create(name: "Rod", img_url: 'https://rb.gy/vcm4sr', recipe_id: recipe.id)
+item3 = Item.create(name: "Hammer", img_url: 'https://rb.gy/vcm4sr', recipe_id: rec3.id)
+Item.create(name: 'Stick', img_url: 'https://rb.gy/vcm4sr', recipe_id: rec2.id)
+Item.create(name: 'Matches', img_url: 'https://rb.gy/8imoux', recipe_id: rec2.id)
+Item.create(name: 'gold', img_url: 'https://rb.gy/uwiid2', recipe_id: rec3.id)
+#stone, brick, gold, torch
 
 
 
