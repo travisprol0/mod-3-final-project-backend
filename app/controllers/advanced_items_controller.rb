@@ -1,0 +1,2 @@
+class AdvancedItemsController < ApplicationController
+end
