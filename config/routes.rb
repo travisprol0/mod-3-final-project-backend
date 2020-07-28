@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :rooms
   resources :advanced_items
   resources :recipes
   resources :items
