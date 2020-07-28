@@ -1,6 +1,6 @@
 class AdvancedItemsController < ApplicationController
     def index
-        advItems = AdvancedItem.All
+        advItems = AdvancedItem.all
         render json: advItems
     end
 end

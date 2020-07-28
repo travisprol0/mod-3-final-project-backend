@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(version: 2020_07_28_143828) do
 
   create_table "advanced_items", force: :cascade do |t|
     t.string "name"
-    t.integer "recipe_id"
     t.string "img_url"
     t.integer "inventory_id"
+    t.integer "damage"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
