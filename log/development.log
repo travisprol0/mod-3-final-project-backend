@@ -7436,3 +7436,555 @@ Processing by ItemsController#index as */*
 Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.7ms | Allocations: 1733)
 
 
+Started GET "/advanced_items" for ::1 at 2020-07-28 16:23:04 -0400
+Started GET "/characters" for ::1 at 2020-07-28 16:23:04 -0400
+Started GET "/recipes" for ::1 at 2020-07-28 16:23:04 -0400
+Started GET "/rooms" for ::1 at 2020-07-28 16:23:04 -0400
+Started GET "/inventories" for ::1 at 2020-07-28 16:23:04 -0400
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharactersController#index as */*
+Processing by AdvancedItemsController#index as */*
+  [1m[35m (25.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (53.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (52.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipesController#index as */*
+Processing by InventoriesController#index as */*
+Processing by RoomsController#index as */*
+  [1m[36mRecipe Load (24.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mAdvancedItem Load (43.8ms)[0m  [1m[34mSELECT "advanced_items".* FROM "advanced_items"[0m
+  ↳ app/controllers/recipes_controller.rb:4:in `index'
+  ↳ app/controllers/advanced_items_controller.rb:4:in `index'
+  [1m[36mRoom Load (21.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  [1m[36mCharacter Load (6.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:3:in `index'
+  [1m[36mInventory Load (1.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" ORDER BY "inventories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/inventories_controller.rb:3:in `index'
+Completed 200 OK in 158ms (Views: 47.0ms | ActiveRecord: 101.3ms | Allocations: 17927)
+
+
+Completed 200 OK in 116ms (Views: 18.2ms | ActiveRecord: 88.4ms | Allocations: 14053)
+
+
+Completed 200 OK in 226ms (Views: 0.5ms | ActiveRecord: 179.4ms | Allocations: 30636)
+
+
+Completed 200 OK in 175ms (Views: 0.5ms | ActiveRecord: 122.0ms | Allocations: 25474)
+
+
+Completed 200 OK in 151ms (Views: 25.7ms | ActiveRecord: 118.2ms | Allocations: 19474)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:23:04 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (22.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 63ms (Views: 29.2ms | ActiveRecord: 27.8ms | Allocations: 8485)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:23:04 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 1.3ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:23:19 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 1.1ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:23:20 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (3.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 3.7ms | Allocations: 1733)
+
+
+Started GET "/characters" for ::1 at 2020-07-28 16:23:38 -0400
+Started GET "/advanced_items" for ::1 at 2020-07-28 16:23:38 -0400
+Started GET "/recipes" for ::1 at 2020-07-28 16:23:38 -0400
+Started GET "/inventories" for ::1 at 2020-07-28 16:23:38 -0400
+Started GET "/rooms" for ::1 at 2020-07-28 16:23:38 -0400
+Processing by CharactersController#index as */*
+Processing by RoomsController#index as */*
+Processing by AdvancedItemsController#index as */*
+Processing by RecipesController#index as */*
+Processing by InventoriesController#index as */*
+  [1m[36mAdvancedItem Load (29.9ms)[0m  [1m[34mSELECT "advanced_items".* FROM "advanced_items"[0m
+  ↳ app/controllers/advanced_items_controller.rb:4:in `index'
+Completed 200 OK in 37ms (Views: 5.8ms | ActiveRecord: 29.9ms | Allocations: 2471)
+
+
+  [1m[36mRecipe Load (33.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4:in `index'
+Completed 200 OK in 40ms (Views: 5.3ms | ActiveRecord: 33.7ms | Allocations: 3226)
+
+
+  [1m[36mRoom Load (39.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+Completed 200 OK in 52ms (Views: 4.5ms | ActiveRecord: 39.4ms | Allocations: 5571)
+
+
+  [1m[36mCharacter Load (10.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:3:in `index'
+Completed 200 OK in 67ms (Views: 0.7ms | ActiveRecord: 44.1ms | Allocations: 7175)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:23:38 -0400
+Processing by ItemsController#index as */*
+  [1m[36mInventory Load (37.8ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" ORDER BY "inventories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/inventories_controller.rb:3:in `index'
+Completed 200 OK in 67ms (Views: 0.7ms | ActiveRecord: 39.7ms | Allocations: 6677)
+
+
+  [1m[36mItem Load (31.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 39ms (Views: 6.9ms | ActiveRecord: 31.4ms | Allocations: 2645)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:23:38 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (1.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 1.7ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:23:44 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.3ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:23:44 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.6ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:23:55 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:23:56 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.6ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:24:49 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:24:53 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:24:55 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:24:56 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (4.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 7.7ms | ActiveRecord: 4.2ms | Allocations: 1733)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mItem Destroy (1.7ms)[0m  [1m[31mDELETE FROM "items"[0m
+  [1m[36mInventory Destroy (1.6ms)[0m  [1m[31mDELETE FROM "inventories"[0m
+  [1m[36mCharacter Destroy (0.7ms)[0m  [1m[31mDELETE FROM "characters"[0m
+  [1m[36mAdvancedItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "advanced_items"[0m
+  [1m[36mRecipe Destroy (0.5ms)[0m  [1m[31mDELETE FROM "recipes"[0m
+  [1m[36mRoom Destroy (0.7ms)[0m  [1m[31mDELETE FROM "rooms"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.7ms)[0m  [1m[32mINSERT INTO "characters" ("name", "health", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Character #1"], ["health", 100], ["img_url", "https://vignette.wikia.nocookie.net/despicableme/images/1/1d/Kevin_minions.png/revision/latest/top-crop/width/360/height/450?cb=20170703052012"], ["created_at", "2020-07-28 20:37:51.791218"], ["updated_at", "2020-07-28 20:37:51.791218"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.3ms)[0m  [1m[32mINSERT INTO "characters" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "dumb"], ["created_at", "2020-07-28 20:37:51.796614"], ["updated_at", "2020-07-28 20:37:51.796614"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (17.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mInventory Create (0.4ms)[0m  [1m[32mINSERT INTO "inventories" ("character_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["character_id", 19], ["created_at", "2020-07-28 20:37:51.837207"], ["updated_at", "2020-07-28 20:37:51.837207"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mInventory Create (0.4ms)[0m  [1m[32mINSERT INTO "inventories" ("character_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["character_id", 20], ["created_at", "2020-07-28 20:37:51.851404"], ["updated_at", "2020-07-28 20:37:51.851404"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mAdvancedItem Create (0.5ms)[0m  [1m[32mINSERT INTO "advanced_items" ("name", "inventory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Fishing Pole"], ["inventory_id", 20], ["created_at", "2020-07-28 20:37:51.902302"], ["updated_at", "2020-07-28 20:37:51.902302"]]
+  [1m[35m (25.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.3ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mAdvancedItem Create (0.3ms)[0m  [1m[32mINSERT INTO "advanced_items" ("name", "inventory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Torch"], ["inventory_id", 20], ["created_at", "2020-07-28 20:37:51.941145"], ["updated_at", "2020-07-28 20:37:51.941145"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mAdvancedItem Create (0.3ms)[0m  [1m[32mINSERT INTO "advanced_items" ("name", "inventory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Key"], ["inventory_id", 20], ["created_at", "2020-07-28 20:37:51.951985"], ["updated_at", "2020-07-28 20:37:51.951985"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdvancedItem Load (0.3ms)[0m  [1m[34mSELECT "advanced_items".* FROM "advanced_items" WHERE "advanced_items"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  [1m[36mRecipe Create (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "advanced_item_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Fishing Pole"], ["advanced_item_id", 27], ["created_at", "2020-07-28 20:37:51.989757"], ["updated_at", "2020-07-28 20:37:51.989757"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdvancedItem Load (0.3ms)[0m  [1m[34mSELECT "advanced_items".* FROM "advanced_items" WHERE "advanced_items"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mRecipe Create (0.7ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "advanced_item_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Torch"], ["advanced_item_id", 28], ["created_at", "2020-07-28 20:37:51.995116"], ["updated_at", "2020-07-28 20:37:51.995116"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdvancedItem Load (0.2ms)[0m  [1m[34mSELECT "advanced_items".* FROM "advanced_items" WHERE "advanced_items"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[36mRecipe Create (0.2ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "advanced_item_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Key"], ["advanced_item_id", 29], ["created_at", "2020-07-28 20:37:52.000288"], ["updated_at", "2020-07-28 20:37:52.000288"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (23.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.5ms)[0m  [1m[32mINSERT INTO "rooms" ("name", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bedroom"], ["img_url", "https://i.imgur.com/2148t5V.jpg"], ["created_at", "2020-07-28 20:37:52.006581"], ["updated_at", "2020-07-28 20:37:52.006581"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("name", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Living Room"], ["img_url", "https://i.imgur.com/eNuukmx.jpg"], ["created_at", "2020-07-28 20:37:52.035586"], ["updated_at", "2020-07-28 20:37:52.035586"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.6ms)[0m  [1m[32mINSERT INTO "rooms" ("name", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Office"], ["img_url", "https://i.imgur.com/JzS9P36.jpg"], ["created_at", "2020-07-28 20:37:52.039524"], ["updated_at", "2020-07-28 20:37:52.039524"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "img_url", "recipe_id", "inventory_id", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "String"], ["img_url", "https://rb.gy/raglyj"], ["recipe_id", 27], ["inventory_id", 20], ["created_at", "2020-07-28 20:37:52.081967"], ["updated_at", "2020-07-28 20:37:52.081967"], ["room_id", 22]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "img_url", "recipe_id", "inventory_id", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Rod"], ["img_url", "https://cdn11.bigcommerce.com/s-yrxo00xam4/images/stencil/1280x1280/products/2032/3041/LSC-368__93800.1565100581.png?c=2&imbypass=on"], ["recipe_id", 27], ["inventory_id", 20], ["created_at", "2020-07-28 20:37:52.090260"], ["updated_at", "2020-07-28 20:37:52.090260"], ["room_id", 24]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "img_url", "recipe_id", "inventory_id", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Hammer"], ["img_url", "https://www.pngarts.com/files/4/Hammer-Transparent-Image.png"], ["recipe_id", 29], ["inventory_id", 20], ["created_at", "2020-07-28 20:37:52.097930"], ["updated_at", "2020-07-28 20:37:52.097930"], ["room_id", 24]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mRoom Load (25.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "img_url", "recipe_id", "inventory_id", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Stick"], ["img_url", "https://lh3.googleusercontent.com/proxy/y6vzMR7cYbOGLNzOGVXXpywpdqvjq_kOIMt2PE-l0ye8m94-aiUGY__vZqOqhowhcmuLIOMjRHk1lZJkNi5r1RMugvQu-uoUwJBEJgV1uxvJN-p7oMs"], ["recipe_id", 28], ["inventory_id", 20], ["created_at", "2020-07-28 20:37:52.131683"], ["updated_at", "2020-07-28 20:37:52.131683"], ["room_id", 23]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "img_url", "recipe_id", "inventory_id", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Matches"], ["img_url", "https://rb.gy/8imoux"], ["recipe_id", 28], ["inventory_id", 20], ["created_at", "2020-07-28 20:37:52.140475"], ["updated_at", "2020-07-28 20:37:52.140475"], ["room_id", 22]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "img_url", "recipe_id", "inventory_id", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Gold"], ["img_url", "https://rb.gy/uwiid2"], ["recipe_id", 29], ["inventory_id", 20], ["created_at", "2020-07-28 20:37:52.147988"], ["updated_at", "2020-07-28 20:37:52.147988"], ["room_id", 23]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/characters" for ::1 at 2020-07-28 16:38:05 -0400
+Started GET "/rooms" for ::1 at 2020-07-28 16:38:05 -0400
+Started GET "/advanced_items" for ::1 at 2020-07-28 16:38:05 -0400
+Started GET "/recipes" for ::1 at 2020-07-28 16:38:05 -0400
+Started GET "/inventories" for ::1 at 2020-07-28 16:38:05 -0400
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by InventoriesController#index as */*
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (32.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (14.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (31.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipesController#index as */*
+Processing by AdvancedItemsController#index as */*
+Processing by CharactersController#index as */*
+Processing by RoomsController#index as */*
+  [1m[36mRecipe Load (24.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mAdvancedItem Load (22.5ms)[0m  [1m[34mSELECT "advanced_items".* FROM "advanced_items"[0m
+  ↳ app/controllers/recipes_controller.rb:4:in `index'
+  ↳ app/controllers/advanced_items_controller.rb:4:in `index'
+  [1m[36mRoom Load (26.8ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mInventory Load (26.3ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" ORDER BY "inventories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  ↳ app/controllers/inventories_controller.rb:3:in `index'
+  [1m[36mCharacter Load (3.8ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:3:in `index'
+Completed 200 OK in 99ms (Views: 39.1ms | ActiveRecord: 54.8ms | Allocations: 12368)
+
+
+Completed 200 OK in 108ms (Views: 29.7ms | ActiveRecord: 69.1ms | Allocations: 16032)
+
+
+Completed 200 OK in 175ms (Views: 0.4ms | ActiveRecord: 130.3ms | Allocations: 26932)
+
+
+Completed 200 OK in 130ms (Views: 1.1ms | ActiveRecord: 67.9ms | Allocations: 21678)
+
+
+Completed 200 OK in 153ms (Views: 19.0ms | ActiveRecord: 127.2ms | Allocations: 24780)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:38:05 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (2.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 75ms (Views: 34.9ms | ActiveRecord: 32.6ms | Allocations: 8503)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:38:05 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 1.0ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:38:09 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:38:16 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:38:21 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:38:40 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:38:45 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.6ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:38:46 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.8ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:38:52 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (7.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 5.9ms | ActiveRecord: 7.2ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:38:53 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.6ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:39:10 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.8ms | Allocations: 1733)
+
+
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mItem Destroy (27.8ms)[0m  [1m[31mDELETE FROM "items"[0m
+  [1m[36mInventory Destroy (1.0ms)[0m  [1m[31mDELETE FROM "inventories"[0m
+  [1m[36mCharacter Destroy (0.8ms)[0m  [1m[31mDELETE FROM "characters"[0m
+  [1m[36mAdvancedItem Destroy (1.2ms)[0m  [1m[31mDELETE FROM "advanced_items"[0m
+  [1m[36mRecipe Destroy (0.7ms)[0m  [1m[31mDELETE FROM "recipes"[0m
+  [1m[36mRoom Destroy (0.6ms)[0m  [1m[31mDELETE FROM "rooms"[0m
+  [1m[35m (20.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.9ms)[0m  [1m[32mINSERT INTO "characters" ("name", "health", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Character #1"], ["health", 100], ["img_url", "https://vignette.wikia.nocookie.net/despicableme/images/1/1d/Kevin_minions.png/revision/latest/top-crop/width/360/height/450?cb=20170703052012"], ["created_at", "2020-07-28 20:41:08.156868"], ["updated_at", "2020-07-28 20:41:08.156868"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.5ms)[0m  [1m[32mINSERT INTO "characters" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "dumb"], ["created_at", "2020-07-28 20:41:08.182446"], ["updated_at", "2020-07-28 20:41:08.182446"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mInventory Create (23.3ms)[0m  [1m[32mINSERT INTO "inventories" ("character_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["character_id", 21], ["created_at", "2020-07-28 20:41:08.204647"], ["updated_at", "2020-07-28 20:41:08.204647"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mInventory Create (0.3ms)[0m  [1m[32mINSERT INTO "inventories" ("character_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["character_id", 22], ["created_at", "2020-07-28 20:41:08.240975"], ["updated_at", "2020-07-28 20:41:08.240975"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (18.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.3ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mAdvancedItem Create (0.4ms)[0m  [1m[32mINSERT INTO "advanced_items" ("name", "inventory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Fishing Pole"], ["inventory_id", 22], ["created_at", "2020-07-28 20:41:08.283212"], ["updated_at", "2020-07-28 20:41:08.283212"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mAdvancedItem Create (0.5ms)[0m  [1m[32mINSERT INTO "advanced_items" ("name", "inventory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Torch"], ["inventory_id", 22], ["created_at", "2020-07-28 20:41:08.294443"], ["updated_at", "2020-07-28 20:41:08.294443"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mAdvancedItem Create (0.2ms)[0m  [1m[32mINSERT INTO "advanced_items" ("name", "inventory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Key"], ["inventory_id", 22], ["created_at", "2020-07-28 20:41:08.300484"], ["updated_at", "2020-07-28 20:41:08.300484"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdvancedItem Load (0.2ms)[0m  [1m[34mSELECT "advanced_items".* FROM "advanced_items" WHERE "advanced_items"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mRecipe Create (0.7ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "advanced_item_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Fishing Pole"], ["advanced_item_id", 30], ["created_at", "2020-07-28 20:41:08.341713"], ["updated_at", "2020-07-28 20:41:08.341713"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdvancedItem Load (0.2ms)[0m  [1m[34mSELECT "advanced_items".* FROM "advanced_items" WHERE "advanced_items"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mRecipe Create (0.2ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "advanced_item_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Torch"], ["advanced_item_id", 31], ["created_at", "2020-07-28 20:41:08.347190"], ["updated_at", "2020-07-28 20:41:08.347190"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdvancedItem Load (0.3ms)[0m  [1m[34mSELECT "advanced_items".* FROM "advanced_items" WHERE "advanced_items"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mRecipe Create (25.2ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "advanced_item_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Key"], ["advanced_item_id", 32], ["created_at", "2020-07-28 20:41:08.352342"], ["updated_at", "2020-07-28 20:41:08.352342"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.5ms)[0m  [1m[32mINSERT INTO "rooms" ("name", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bedroom"], ["img_url", "https://i.imgur.com/2148t5V.jpg"], ["created_at", "2020-07-28 20:41:08.386442"], ["updated_at", "2020-07-28 20:41:08.386442"]]
+  [1m[35m (10.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (25.8ms)[0m  [1m[32mINSERT INTO "rooms" ("name", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Living Room"], ["img_url", "https://i.imgur.com/sFJLjFi.jpg"], ["created_at", "2020-07-28 20:41:08.400776"], ["updated_at", "2020-07-28 20:41:08.400776"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (0.3ms)[0m  [1m[32mINSERT INTO "rooms" ("name", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Office"], ["img_url", "https://i.imgur.com/JzS9P36.jpg"], ["created_at", "2020-07-28 20:41:08.430870"], ["updated_at", "2020-07-28 20:41:08.430870"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mRoom Load (0.1ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "img_url", "recipe_id", "inventory_id", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "String"], ["img_url", "https://rb.gy/raglyj"], ["recipe_id", 30], ["inventory_id", 22], ["created_at", "2020-07-28 20:41:08.449893"], ["updated_at", "2020-07-28 20:41:08.449893"], ["room_id", 25]]
+  [1m[35m (25.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mInventory Load (0.3ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "img_url", "recipe_id", "inventory_id", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Rod"], ["img_url", "https://cdn11.bigcommerce.com/s-yrxo00xam4/images/stencil/1280x1280/products/2032/3041/LSC-368__93800.1565100581.png?c=2&imbypass=on"], ["recipe_id", 30], ["inventory_id", 22], ["created_at", "2020-07-28 20:41:08.484857"], ["updated_at", "2020-07-28 20:41:08.484857"], ["room_id", 27]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "img_url", "recipe_id", "inventory_id", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Hammer"], ["img_url", "https://www.pngarts.com/files/4/Hammer-Transparent-Image.png"], ["recipe_id", 32], ["inventory_id", 22], ["created_at", "2020-07-28 20:41:08.493109"], ["updated_at", "2020-07-28 20:41:08.493109"], ["room_id", 27]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "img_url", "recipe_id", "inventory_id", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Stick"], ["img_url", "https://lh3.googleusercontent.com/proxy/y6vzMR7cYbOGLNzOGVXXpywpdqvjq_kOIMt2PE-l0ye8m94-aiUGY__vZqOqhowhcmuLIOMjRHk1lZJkNi5r1RMugvQu-uoUwJBEJgV1uxvJN-p7oMs"], ["recipe_id", 31], ["inventory_id", 22], ["created_at", "2020-07-28 20:41:08.501249"], ["updated_at", "2020-07-28 20:41:08.501249"], ["room_id", 26]]
+  [1m[35m (24.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "img_url", "recipe_id", "inventory_id", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Matches"], ["img_url", "https://rb.gy/8imoux"], ["recipe_id", 31], ["inventory_id", 22], ["created_at", "2020-07-28 20:41:08.534306"], ["updated_at", "2020-07-28 20:41:08.534306"], ["room_id", 25]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mItem Create (1.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "img_url", "recipe_id", "inventory_id", "created_at", "updated_at", "room_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Gold"], ["img_url", "https://rb.gy/uwiid2"], ["recipe_id", 32], ["inventory_id", 22], ["created_at", "2020-07-28 20:41:08.543036"], ["updated_at", "2020-07-28 20:41:08.543036"], ["room_id", 26]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/inventories" for ::1 at 2020-07-28 16:41:22 -0400
+Started GET "/recipes" for ::1 at 2020-07-28 16:41:22 -0400
+Started GET "/characters" for ::1 at 2020-07-28 16:41:22 -0400
+Started GET "/advanced_items" for ::1 at 2020-07-28 16:41:22 -0400
+Started GET "/rooms" for ::1 at 2020-07-28 16:41:22 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipesController#index as */*
+  [1m[35m (19.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mRecipe Load (1.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+Processing by CharactersController#index as */*
+  [1m[35m (13.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (14.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RoomsController#index as */*
+  ↳ app/controllers/recipes_controller.rb:4:in `index'
+  [1m[35m (44.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdvancedItemsController#index as */*
+Processing by InventoriesController#index as */*
+  [1m[36mRoom Load (33.7ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  [1m[36mAdvancedItem Load (21.1ms)[0m  [1m[34mSELECT "advanced_items".* FROM "advanced_items"[0m
+  ↳ app/controllers/advanced_items_controller.rb:4:in `index'
+Completed 200 OK in 183ms (Views: 81.9ms | ActiveRecord: 85.3ms | Allocations: 17896)
+
+
+  [1m[36mCharacter Load (12.8ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:3:in `index'
+  [1m[36mInventory Load (25.7ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" ORDER BY "inventories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/inventories_controller.rb:3:in `index'
+Completed 200 OK in 174ms (Views: 40.3ms | ActiveRecord: 119.0ms | Allocations: 15800)
+
+
+Completed 200 OK in 160ms (Views: 29.9ms | ActiveRecord: 117.3ms | Allocations: 18212)
+
+
+Completed 200 OK in 166ms (Views: 1.1ms | ActiveRecord: 117.3ms | Allocations: 19875)
+
+
+Completed 200 OK in 344ms (Views: 1.2ms | ActiveRecord: 224.0ms | Allocations: 31351)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:41:22 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 122ms (Views: 37.4ms | ActiveRecord: 76.0ms | Allocations: 8495)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:41:22 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.8ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:41:23 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.7ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:41:31 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:41:41 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.1ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-28 16:41:41 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.6ms | Allocations: 1733)
+
+
