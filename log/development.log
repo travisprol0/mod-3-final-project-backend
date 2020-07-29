@@ -14062,3 +14062,365 @@ Processing by InventoriesController#index as */*
 Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.8ms | Allocations: 1704)
 
 
+Started GET "/inventories" for ::1 at 2020-07-29 10:55:05 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by InventoriesController#index as HTML
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" ORDER BY "inventories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/inventories_controller.rb:3:in `index'
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."inventory_id" = $1[0m  [["inventory_id", 19]]
+  ↳ app/controllers/inventories_controller.rb:4:in `index'
+Completed 200 OK in 24ms (Views: 3.5ms | ActiveRecord: 4.2ms | Allocations: 9878)
+
+
+Started PATCH "/items/54" for ::1 at 2020-07-29 10:55:18 -0400
+Started PATCH "/items/54" for ::1 at 2020-07-29 10:55:18 -0400
+Processing by ItemsController#update as JSON
+  Parameters: {"id"=>"54", "item"=>{}}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:8:in `update'
+Completed 400 Bad Request in 10ms (ActiveRecord: 1.3ms | Allocations: 6502)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: item):
+  
+app/controllers/items_controller.rb:21:in `item_params'
+app/controllers/items_controller.rb:9:in `update'
+Processing by ItemsController#update as JSON
+  Parameters: {"id"=>"54", "item"=>{}}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:8:in `update'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.4ms | Allocations: 787)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: item):
+  
+app/controllers/items_controller.rb:21:in `item_params'
+app/controllers/items_controller.rb:9:in `update'
+Started GET "/rooms" for ::1 at 2020-07-29 10:55:38 -0400
+Started GET "/advanced_items" for ::1 at 2020-07-29 10:55:38 -0400
+Started GET "/recipes" for ::1 at 2020-07-29 10:55:38 -0400
+Started GET "/characters" for ::1 at 2020-07-29 10:55:38 -0400
+Processing by AdvancedItemsController#index as */*
+  [1m[36mAdvancedItem Load (0.4ms)[0m  [1m[34mSELECT "advanced_items".* FROM "advanced_items"[0m
+  ↳ app/controllers/advanced_items_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 7.1ms | ActiveRecord: 4.9ms | Allocations: 10315)
+
+
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+Processing by CharactersController#index as */*
+  ↳ app/controllers/recipes_controller.rb:4:in `index'
+Processing by RoomsController#index as */*
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  [1m[36mCharacter Load (0.9ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:3:in `index'
+Completed 200 OK in 21ms (Views: 7.1ms | ActiveRecord: 12.6ms | Allocations: 10834)
+
+
+Completed 200 OK in 12ms (Views: 5.6ms | ActiveRecord: 4.8ms | Allocations: 9399)
+
+
+Completed 200 OK in 30ms (Views: 0.3ms | ActiveRecord: 17.6ms | Allocations: 15919)
+
+
+Started GET "/items" for ::1 at 2020-07-29 10:55:38 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 1744)
+
+
+Started GET "/items" for ::1 at 2020-07-29 10:55:38 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Started GET "/inventories" for ::1 at 2020-07-29 10:55:38 -0400
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 2046)
+
+
+Processing by InventoriesController#index as */*
+  [1m[36mInventory Load (0.6ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" ORDER BY "inventories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/inventories_controller.rb:3:in `index'
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."inventory_id" = $1[0m  [["inventory_id", 19]]
+  ↳ app/controllers/inventories_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.9ms | Allocations: 1712)
+
+
+Started GET "/inventories" for ::1 at 2020-07-29 10:55:38 -0400
+Processing by InventoriesController#index as */*
+  [1m[36mInventory Load (0.4ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" ORDER BY "inventories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/inventories_controller.rb:3:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."inventory_id" = $1[0m  [["inventory_id", 19]]
+  ↳ app/controllers/inventories_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.6ms | Allocations: 1704)
+
+
+Started PATCH "/items/54" for ::1 at 2020-07-29 10:55:40 -0400
+Started PATCH "/items/54" for ::1 at 2020-07-29 10:55:40 -0400
+Processing by ItemsController#update as JSON
+Processing by ItemsController#update as JSON
+  Parameters: {"id"=>"54", "item"=>{}}
+  Parameters: {"id"=>"54", "item"=>{}}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:8:in `update'
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.4ms | Allocations: 746)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: item):
+  
+app/controllers/items_controller.rb:21:in `item_params'
+app/controllers/items_controller.rb:9:in `update'
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:8:in `update'
+Completed 400 Bad Request in 29ms (ActiveRecord: 0.3ms | Allocations: 27834)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: item):
+  
+app/controllers/items_controller.rb:21:in `item_params'
+app/controllers/items_controller.rb:9:in `update'
+Started GET "/inventories" for ::1 at 2020-07-29 10:55:42 -0400
+Processing by InventoriesController#index as HTML
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" ORDER BY "inventories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/inventories_controller.rb:3:in `index'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."inventory_id" = $1[0m  [["inventory_id", 19]]
+  ↳ app/controllers/inventories_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 1701)
+
+
+Started GET "/rooms" for ::1 at 2020-07-29 10:55:45 -0400
+Started GET "/advanced_items" for ::1 at 2020-07-29 10:55:45 -0400
+Started GET "/characters" for ::1 at 2020-07-29 10:55:45 -0400
+Started GET "/recipes" for ::1 at 2020-07-29 10:55:45 -0400
+Processing by RoomsController#index as */*
+Processing by AdvancedItemsController#index as */*
+Processing by CharactersController#index as */*
+  [1m[36mRoom Load (2.1ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+Processing by RecipesController#index as */*
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  [1m[36mAdvancedItem Load (2.6ms)[0m  [1m[34mSELECT "advanced_items".* FROM "advanced_items"[0m
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 2.1ms | Allocations: 2980)
+
+
+  [1m[36mRecipe Load (2.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/advanced_items_controller.rb:4:in `index'
+  ↳ app/controllers/recipes_controller.rb:4:in `index'
+  [1m[36mCharacter Load (3.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 2.4ms | Allocations: 2977)
+
+
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 2.6ms | Allocations: 3882)
+
+
+  ↳ app/controllers/characters_controller.rb:3:in `index'
+Completed 200 OK in 13ms (Views: 0.5ms | ActiveRecord: 5.6ms | Allocations: 5101)
+
+
+Started GET "/items" for ::1 at 2020-07-29 10:55:45 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms | Allocations: 1733)
+
+
+Started GET "/items" for ::1 at 2020-07-29 10:55:45 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1733)
+
+
+Started GET "/inventories" for ::1 at 2020-07-29 10:55:45 -0400
+Processing by InventoriesController#index as */*
+  [1m[36mInventory Load (0.4ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" ORDER BY "inventories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/inventories_controller.rb:3:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."inventory_id" = $1[0m  [["inventory_id", 19]]
+  ↳ app/controllers/inventories_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.5ms | Allocations: 1712)
+
+
+Started GET "/inventories" for ::1 at 2020-07-29 10:55:45 -0400
+Processing by InventoriesController#index as */*
+  [1m[36mInventory Load (0.5ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" ORDER BY "inventories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/inventories_controller.rb:3:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."inventory_id" = $1[0m  [["inventory_id", 19]]
+  ↳ app/controllers/inventories_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.6ms | Allocations: 1704)
+
+
+Started GET "/inventories" for ::1 at 2020-07-29 10:59:36 -0400
+Processing by InventoriesController#index as HTML
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" ORDER BY "inventories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/inventories_controller.rb:3:in `index'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."inventory_id" = $1[0m  [["inventory_id", 19]]
+  ↳ app/controllers/inventories_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 1705)
+
+
+Started GET "/inventories" for ::1 at 2020-07-29 10:59:45 -0400
+  
+SyntaxError (/Users/travisjohnprol/Dropbox/Travis/Flatiron/Bootcamp/code/Mod3/Mod-3-Final-Project/final-project-backend/app/controllers/inventories_controller.rb:4: syntax error, unexpected '}', expecting =>
+        render json: { inv }
+                           ^):
+  
+app/controllers/inventories_controller.rb:4: syntax error, unexpected '}', expecting =>
+app/controllers/inventories_controller.rb:4: syntax error, unexpected '}', expecting =>
+Started GET "/inventories" for ::1 at 2020-07-29 11:02:16 -0400
+Processing by InventoriesController#index as HTML
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" ORDER BY "inventories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/inventories_controller.rb:3:in `index'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 3.0ms | Allocations: 4604)
+
+
+Started GET "/inventories" for ::1 at 2020-07-29 11:02:42 -0400
+Processing by InventoriesController#index as HTML
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" ORDER BY "inventories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/inventories_controller.rb:3:in `index'
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 2.2ms | Allocations: 65110)
+
+
+  
+NameError (undefined local variable or method `item' for #<InventoriesController:0x00007ff5b43a4420>):
+  
+app/controllers/inventories_controller.rb:4:in `index'
+Started GET "/inventories" for ::1 at 2020-07-29 11:02:52 -0400
+Processing by InventoriesController#index as HTML
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" ORDER BY "inventories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/inventories_controller.rb:3:in `index'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 2.9ms | Allocations: 5408)
+
+
+Started GET "/inventories" for ::1 at 2020-07-29 11:03:28 -0400
+Processing by InventoriesController#index as HTML
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" ORDER BY "inventories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/inventories_controller.rb:3:in `index'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 2.3ms | Allocations: 6641)
+
+
+  
+NoMethodError (undefined method `items' for #<Class:0x00007ff5b35f9ed8>):
+  
+app/controllers/inventories_controller.rb:4:in `index'
+Started GET "/inventories" for ::1 at 2020-07-29 11:04:47 -0400
+Processing by InventoriesController#index as HTML
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" ORDER BY "inventories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/inventories_controller.rb:3:in `index'
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."inventory_id" = $1[0m  [["inventory_id", 19]]
+  ↳ app/controllers/inventories_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 4.3ms | ActiveRecord: 4.4ms | Allocations: 7051)
+
+
+Started GET "/rooms" for ::1 at 2020-07-29 11:04:58 -0400
+Started GET "/advanced_items" for ::1 at 2020-07-29 11:04:58 -0400
+Started GET "/characters" for ::1 at 2020-07-29 11:04:58 -0400
+Processing by RoomsController#index as */*
+Started GET "/recipes" for ::1 at 2020-07-29 11:04:58 -0400
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+Processing by AdvancedItemsController#index as */*
+Processing by CharactersController#index as */*
+  ↳ app/controllers/rooms_controller.rb:4:in `index'
+  [1m[36mAdvancedItem Load (1.9ms)[0m  [1m[34mSELECT "advanced_items".* FROM "advanced_items"[0m
+Processing by RecipesController#index as */*
+  ↳ app/controllers/advanced_items_controller.rb:4:in `index'
+  [1m[36mRecipe Load (1.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 11.9ms | ActiveRecord: 6.3ms | Allocations: 12151)
+
+
+  [1m[36mCharacter Load (5.8ms)[0m  [1m[34mSELECT "characters".* FROM "characters" ORDER BY "characters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:3:in `index'
+Completed 200 OK in 25ms (Views: 12.9ms | ActiveRecord: 10.7ms | Allocations: 15154)
+
+
+Completed 200 OK in 30ms (Views: 0.2ms | ActiveRecord: 18.6ms | Allocations: 18106)
+
+
+Started GET "/items" for ::1 at 2020-07-29 11:04:58 -0400
+Completed 200 OK in 30ms (Views: 10.2ms | ActiveRecord: 17.7ms | Allocations: 18962)
+
+
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 1.9ms | Allocations: 7114)
+
+
+Started GET "/items" for ::1 at 2020-07-29 11:04:58 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 1761)
+
+
+Started GET "/inventories" for ::1 at 2020-07-29 11:04:58 -0400
+Processing by InventoriesController#index as */*
+  [1m[36mInventory Load (0.3ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" ORDER BY "inventories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/inventories_controller.rb:3:in `index'
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."inventory_id" = $1[0m  [["inventory_id", 19]]
+  ↳ app/controllers/inventories_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.9ms | Allocations: 1806)
+
+
+Started GET "/inventories" for ::1 at 2020-07-29 11:04:58 -0400
+Processing by InventoriesController#index as */*
+  [1m[36mInventory Load (0.4ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" ORDER BY "inventories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/inventories_controller.rb:3:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."inventory_id" = $1[0m  [["inventory_id", 19]]
+  ↳ app/controllers/inventories_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.6ms | Allocations: 1806)
+
+
+Started PATCH "/items/50" for ::1 at 2020-07-29 11:04:59 -0400
+Started PATCH "/items/50" for ::1 at 2020-07-29 11:04:59 -0400
+Processing by ItemsController#update as JSON
+Processing by ItemsController#update as JSON
+  Parameters: {"inventory_id"=>19, "id"=>"50", "item"=>{"inventory_id"=>19}}
+  Parameters: {"inventory_id"=>19, "id"=>"50", "item"=>{"inventory_id"=>19}}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:8:in `update'
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:8:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/items_controller.rb:9:in `update'
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/items_controller.rb:9:in `update'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:9:in `update'
+  [1m[36mRecipe Load (1.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:9:in `update'
+  [1m[36mInventory Load (0.5ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:9:in `update'
+  [1m[36mInventory Load (0.6ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:9:in `update'
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:9:in `update'
+  [1m[36mRoom Load (0.7ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:9:in `update'
+  [1m[36mItem Update (0.6ms)[0m  [1m[33mUPDATE "items" SET "inventory_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["inventory_id", 19], ["updated_at", "2020-07-29 15:04:59.837663"], ["id", 50]]
+  ↳ app/controllers/items_controller.rb:9:in `update'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mItem Update (1.2ms)[0m  [1m[33mUPDATE "items" SET "inventory_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["inventory_id", 19], ["updated_at", "2020-07-29 15:04:59.838860"], ["id", 50]]
+  ↳ app/controllers/items_controller.rb:9:in `update'
+  ↳ app/controllers/items_controller.rb:9:in `update'
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 3.0ms | Allocations: 13941)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/items_controller.rb:9:in `update'
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 5.0ms | Allocations: 14688)
+
+
+Started GET "/inventories" for ::1 at 2020-07-29 11:05:01 -0400
+Processing by InventoriesController#index as HTML
+  [1m[36mInventory Load (0.1ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" ORDER BY "inventories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/inventories_controller.rb:3:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."inventory_id" = $1[0m  [["inventory_id", 19]]
+  ↳ app/controllers/inventories_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1966)
+
+
