@@ -18,6 +18,6 @@ class ItemsController < ApplicationController
     private
 
     def item_params
-        params.require(:item).permit(:inventory_id)
+        params.require(:item).permit(:inventory_id, :room_id)
     end
 end
