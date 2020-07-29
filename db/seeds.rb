@@ -36,7 +36,7 @@ item2 = Item.new(name: "Rod", img_url: 'https://cdn11.bigcommerce.com/s-yrxo00xa
 item2.save()
 item3 = Item.new(name: "Hammer", img_url: 'https://www.pngarts.com/files/4/Hammer-Transparent-Image.png', recipe_id: rec3.id, inventory_id: dumbinventory.id, room_id: office.id)
 item3.save()
-item4 = Item.new(name: 'Stick', img_url: 'https://lh3.googleusercontent.com/proxy/y6vzMR7cYbOGLNzOGVXXpywpdqvjq_kOIMt2PE-l0ye8m94-aiUGY__vZqOqhowhcmuLIOMjRHk1lZJkNi5r1RMugvQu-uoUwJBEJgV1uxvJN-p7oMs', recipe_id: rec2.id, inventory_id: dumbinventory.id, room_id: living.id)
+item4 = Item.new(name: 'Stick', img_url: 'https://vignette.wikia.nocookie.net/vesteria/images/a/aa/Stick.png/revision/latest?cb=20181007183313', recipe_id: rec2.id, inventory_id: dumbinventory.id, room_id: living.id)
 item4.save()
 item5 = Item.new(name: 'Matches', img_url: 'https://rb.gy/8imoux', recipe_id: rec2.id, inventory_id: dumbinventory.id, room_id: bedroom.id)
 item5.save()
