@@ -5,14 +5,19 @@ class ItemsController < ApplicationController
     end
 
     def update
-        item = Item.find[params[:id]]
+        item = Item.find(params[:id])
         item.update!(item_params)
+        render json: item
+    end
+
+    def show
+        item = Item.find(params[:id])
         render json: item
     end
 
     private
 
     def item_params
-        params.require[:item].permit[:inventory_id]
+        params.require(:item).permit(:inventory_id)
     end
 end
