@@ -18,9 +18,9 @@ dummy = Character.create(name:'dumb')
 inventory = Inventory.create(character_id: character.id)
 dumbinventory = Inventory.create(character_id: dummy.id)
 
-advanced_item1 = AdvancedItem.create(name: "Fishing Pole", inventory_id: dumbinventory.id)
-two = AdvancedItem.create(name: 'Torch', inventory_id: dumbinventory.id)
-key = AdvancedItem.create(name: 'Key', inventory_id: dumbinventory.id)
+advanced_item1 = AdvancedItem.create(name: "Fishing Pole", inventory_id: dumbinventory.id, img_url: '/Users/travisjohnprol/Dropbox/Travis/Flatiron/Bootcamp/code/Mod3/Mod-3-Final-Project/final-project-backend/db/images/fishing-pole.png')
+two = AdvancedItem.create(name: 'Torch', inventory_id: dumbinventory.id, img_url: '/Users/travisjohnprol/Dropbox/Travis/Flatiron/Bootcamp/code/Mod3/Mod-3-Final-Project/final-project-backend/db/images/torch.png')
+key = AdvancedItem.create(name: 'Key', inventory_id: dumbinventory.id, img_url: '/Users/travisjohnprol/Dropbox/Travis/Flatiron/Bootcamp/code/Mod3/Mod-3-Final-Project/final-project-backend/db/images/key.png')
 
 recipe = Recipe.create(name: "Fishing Pole", advanced_item_id: advanced_item1.id)
 rec2 = Recipe.create(name: 'Torch', advanced_item_id: two.id)
