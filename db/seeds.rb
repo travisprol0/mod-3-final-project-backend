@@ -29,6 +29,11 @@ rec3 = Recipe.create(name: 'Key', advanced_item_id: key.id)
 bedroom = Room.create(name: "Bedroom", img_url: 'images/bedroom.jpg')
 living = Room.create(name: "Living Room", img_url: 'images/living.jpg')
 office = Room.create(name: "Office", img_url: 'images/office.jpg')
+dummyRoom1 = Room.create(name: 'dummy', img_url: '')
+dummyRoom2 = Room.create(name: 'dummy', img_url: '')
+dummyRoom3 = Room.create(name: 'dummy', img_url: '')
+
+
 
 item1 = Item.new(name: "String", img_url: 'images/String.png', recipe_id: recipe.id, inventory_id: dumbinventory.id, room_id: bedroom.id)
 item1.save()
